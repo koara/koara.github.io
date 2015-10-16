@@ -4,12 +4,34 @@
   </head>
   <body>
     <div id="bd">
-    	<h1>Koara</h1>
-    	
+
     	<p><a href="https://en.wikipedia.org/wiki/Lightweight_markup_language">Lightweight markup languages</a> are typically all-or-nothing, but most 
     	use cases require only a subset of the language. This leads to numerous forks and flavors and ultimately confuses the end-user. Koara is a modular 
     	lightweight markup language (based on a <a href="grammar.html">formal grammar</a>) where every part of the syntax can be enabled/disabled. If the syntax is disabled, it will 
     	just render as plain text.</p>
+    	
+    	<h1>Documentation</h1>
+    	
+    	<ul>
+    		<li><a href="#paragraphs">Paragraphs</a></li>
+    	</ul>
+    	
+    	<h2><a name="paragraphs"></a>Paragraphs</h2>
+    	
+    	<p>When enabled, any block of text that is not a heading, list, blockquote or codeblock is considered a paragraph. Paragraphs are 
+    	separated by one or more blank lines. Newline characters are translated to linebreaks.</p>
+    	
+    	
+<pre><code>This is a simple paragraph.
+
+Use the return key for lines
+that need a break.</code></pre>
+
+<pre><code>&lt;p&gt;This is a simple paragraph.&lt;/p&gt;
+
+&lt;p&gt;Use the return key for lines&lt;br&gt;
+that need a break.&lt;/p&gt;</code></pre>
+    	
     	
     </div>
   </body>
