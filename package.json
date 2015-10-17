@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "devDependencies": {
-    "gulp": "^3.9.0"
+    "browser-sync": "^2.9.11",
+    "gulp": "^3.9.0",
+    "gulp-htmlmin": "^1.2.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-webserver": "^0.9.1"
   }
 }
