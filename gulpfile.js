@@ -1,7 +1,7 @@
 var fs = require('fs'),
 	gulp = require('gulp'),
-    rename = require('gulp-rename'),
-    template = require('gulp-template'),
+  rename = require('gulp-rename'),
+  template = require('gulp-template'),
 	webserver = require('gulp-webserver');
 
 gulp.task('render', function() {
