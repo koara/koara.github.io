@@ -1,0 +1,16 @@
+<h1>What is Koara?</h1>
+
+<p>Many applications use some sort of <a href="#">lightweight markup language</a> to enhance the writing experience of their users. 
+But not every use case requires the same type of syntax. This has led to many forks and flavors of existing languages.</p>
+
+<p>Koara is a modular lightweight markup language. The application owner can decide which parts of the syntax they want to allow. When a user writes 
+syntax that is not allowed, it will just render as plain text.<p>
+
+<!--
+<ul>
+  <li><a href="#">Paragraphs</a></li>
+</ul>
+
+<h2>Paragraphs</h2>
+<p>A block of text without special meaning, is considered a paragraph. 
+-->
