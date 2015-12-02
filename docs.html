@@ -13,18 +13,169 @@
     		<p><a href="/"><img src="logo.png" alt="Koara" /></a></p>
 
 			<ul id="nv">
-			  <li>Currently v0.7.0</li>
+			  <li>Currently v0.6.0</li>
 			  <li>·</li>
 			  <li><a href="/docs.html">Docs</a></li>
 			  <li>·</li>
 			  <li><a href="/grammar.html">Grammar</a></li>
 			  <li>·</li>
 			  <li><a href="/projects.html">Projects</a></li>
-			  <li>·</li>
-			  <li><a href="/demo.html">Demo</a></li>
 			</ul>
 					
-			-DOCS
+			<h1>Documentation</h1>
+
+<h2>Paragraphs</h2>
+<p><em>Koara:</em></p>
+<pre><code>This is a simple paragraph.
+
+Use the return key for lines
+that need a break.
+</code></pre>
+
+<p><em>HTML:</em></p>
+<pre>&lt;<span class="pl-ent">p</span>&gt;This is a simple paragraph.&lt;/<span class="pl-ent">p</span>&gt;
+
+&lt;<span class="pl-ent">p</span>&gt;Use the return key for lines&lt;<span class="pl-ent">br</span>&gt;
+that need a break.&lt;/<span class="pl-ent">p</span>&gt;</pre>
+
+<p>If enabled, any default block of text will become a paragraph. Paragraphs are separated by one or more blank lines. 
+Koara uses return-based line breaks.<p>
+
+<h2>Headings</h2>
+<p><em>Koara:</em></p>
+<pre><code>= Heading 1
+== Heading 2
+=== Heading 3
+==== Heading 4
+===== Heading 5
+====== Heading 6
+\= A heading can be escaped like this.
+</code></pre>
+
+<p><em>HTML:</em></p>
+<pre>&lt;<span class="pl-ent">h1</span>&gt;Heading 1&lt;/<span class="pl-ent">h1</span>&gt;
+
+&lt;<span class="pl-ent">h2</span>&gt;Heading 2&lt;/<span class="pl-ent">h2</span>&gt;
+
+&lt;<span class="pl-ent">h3</span>&gt;Heading 3&lt;/<span class="pl-ent">h3</span>&gt;
+
+&lt;<span class="pl-ent">h4</span>&gt;Heading 4&lt;/<span class="pl-ent">h4</span>&gt;
+
+&lt;<span class="pl-ent">h5</span>&gt;Heading 5&lt;/<span class="pl-ent">h5</span>&gt;
+
+&lt;<span class="pl-ent">h6</span>&gt;Heading 6&lt;/<span class="pl-ent">h6</span>&gt;
+
+&lt;<span class="pl-ent">p</span>&gt;= A heading can be escaped like this.&lt;/<span class="pl-ent">p</span>&gt;</pre>
+
+<p>If enabled and a line starts with equal signs, it will be considered a heading. The maximum header-level is 6. Whitespace or blank lines are always optional.<p>
+<p><strong>Escaping:</strong> If you don't want koara to parse an equal-sign as a heading, you can escape it, by prepending a backslash. You can also escape 
+all other characters used in the syntax.
+
+<h2>Lists</h2>
+<p><em>Koara:</em></p>
+<pre><code>- Item 1
+- Item 2
+    - Item 2A
+    - Item 2B
+1. Item 1
+2. Item 2
+    1. Item 2A
+    2. Item 2B
+</code></pre>
+
+<p><em>HTML:</em></p>
+<pre>&lt;<span class="pl-ent">ul</span>&gt;
+  &lt;<span class="pl-ent">li</span>&gt;Item 1&lt;/<span class="pl-ent">li</span>&gt;
+  &lt;<span class="pl-ent">li</span>&gt;
+    &lt;<span class="pl-ent">p</span>&gt;Item 2&lt;/<span class="pl-ent">p</span>&gt;
+    &lt;<span class="pl-ent">ul</span>&gt;
+      &lt;<span class="pl-ent">li</span>&gt;Item 2A&lt;/<span class="pl-ent">li</span>&gt;
+      &lt;<span class="pl-ent">li</span>&gt;Item 2B&lt;/<span class="pl-ent">li</span>&gt;
+    &lt;/<span class="pl-ent">ul</span>&gt;
+  &lt;/<span class="pl-ent">li</span>&gt;
+&lt;/<span class="pl-ent">ul</span>&gt;
+
+&lt;<span class="pl-ent">ol</span>&gt;
+  &lt;<span class="pl-ent">li</span>&gt;Item 1&lt;/<span class="pl-ent">li</span>&gt;
+  &lt;<span class="pl-ent">li</span>&gt;
+    &lt;<span class="pl-ent">p</span>&gt;Item 2&lt;/<span class="pl-ent">p</span>&gt;
+    &lt;<span class="pl-ent">ol</span>&gt;
+      &lt;<span class="pl-ent">li</span>&gt;Item 2A&lt;/<span class="pl-ent">li</span>&gt;
+      &lt;<span class="pl-ent">li</span>&gt;Item 2B&lt;/<span class="pl-ent">li</span>&gt;
+    &lt;/<span class="pl-ent">ol</span>&gt;
+  &lt;/<span class="pl-ent">li</span>&gt;
+&lt;/<span class="pl-ent">ol</span>&gt;</pre>
+
+<h2>Links</h2>
+<p><em>Koara:</em></p>
+<pre><code>This is an [internal link].
+This is an [inline link](http://www.google.com).
+</code></pre>
+
+<p><em>HTML:</em></p>
+<pre>&lt;<span class="pl-ent">p</span>&gt;This is an &lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;internal link&lt;/<span class="pl-ent">a</span>&gt;.&lt;<span class="pl-ent">br</span>&gt;
+This is an &lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.google.com<span class="pl-pds">"</span></span>&gt;inline link&lt;/<span class="pl-ent">a</span>&gt;.&lt;/<span class="pl-ent">p</span>&gt;</pre>
+
+<h2>Images</h2>
+<p><em>Koara:</em></p>
+<pre><code>This is an [image:internal image]
+This is an [image:inline image](http://www.koara.io/logo.png)
+</code></pre>
+
+<p><em>HTML:</em></p>
+<pre>&lt;<span class="pl-ent">p</span>&gt;This is an &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s"><span class="pl-pds">"</span>internal image<span class="pl-pds">"</span></span> /&gt;&lt;<span class="pl-ent">br</span>&gt;
+This is an &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.koara.io/logo.png<span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s"><span class="pl-pds">"</span>inline image<span class="pl-pds">"</span></span> /&gt;&lt;/<span class="pl-ent">p</span>&gt;</pre>
+
+<h2>Formatting</h2>
+<p><em>Koara:</em></p>
+<pre><code>Koara supports *strong* and _emphasis_
+
+You can format *more then
+one line*
+</code></pre>
+
+<p><em>HTML:</em></p>
+<pre>&lt;<span class="pl-ent">p</span>&gt;Koara supports &lt;<span class="pl-ent">strong</span>&gt;strong&lt;/<span class="pl-ent">strong</span>&gt; and &lt;<span class="pl-ent">em</span>&gt;emphasis&lt;/<span class="pl-ent">em</span>&gt;&lt;/<span class="pl-ent">p</span>&gt;
+
+&lt;<span class="pl-ent">p</span>&gt;You can format &lt;<span class="pl-ent">strong</span>&gt;more then&lt;<span class="pl-ent">br</span>&gt;
+one line&lt;/<span class="pl-ent">strong</span>&gt;&lt;/<span class="pl-ent">p</span>&gt;</pre>
+
+<h2>Blockquotes</h2>
+<p><em>Koara:</em></p>
+<pre><code>&gt; Blockquote 1
+&gt;&gt; Blockquote 2
+&gt;&gt;&gt; Blockquote 3
+</code></pre>
+
+<p><em>HTML:</em></p>
+<pre>&lt;<span class="pl-ent">blockquote</span>&gt;
+  &lt;<span class="pl-ent">p</span>&gt;Blockquote 1&lt;/<span class="pl-ent">p</span>&gt;
+  &lt;<span class="pl-ent">blockquote</span>&gt;
+    &lt;<span class="pl-ent">p</span>&gt;Blockquote 2&lt;/<span class="pl-ent">p</span>&gt;
+    &lt;<span class="pl-ent">blockquote</span>&gt;
+      &lt;<span class="pl-ent">p</span>&gt;Blockquote 3&lt;/<span class="pl-ent">p</span>&gt;
+    &lt;/<span class="pl-ent">blockquote</span>&gt;
+  &lt;/<span class="pl-ent">blockquote</span>&gt;
+&lt;/<span class="pl-ent">blockquote</span>&gt;</pre>
+
+
+<h2>Code</h2>
+<p><em>Koara:</em></p>
+<pre><code>Inline `code` works with backticks. You can also create a fenced code block
+
+```
+function greeting() {
+  console.log("Hello World");
+}
+```
+</code></pre>
+
+<p><em>HTML:</em></p>
+<pre>&lt;<span class="pl-ent">p</span>&gt;Inline &lt;<span class="pl-ent">code</span>&gt;code&lt;/<span class="pl-ent">code</span>&gt; works with backticks.&lt;/<span class="pl-ent">p</span>&gt;
+
+&lt;<span class="pl-ent">pre</span>&gt;&lt;<span class="pl-ent">code</span>&gt;function greeting() {
+  console.log(<span class="pl-c1">&amp;quot;</span>Hello World<span class="pl-c1">&amp;quot;</span>);
+}&lt;/<span class="pl-ent">code</span>&gt;&lt;/<span class="pl-ent">pre</span>&gt;</pre>
     	</div>
 	</body>
 </html>
