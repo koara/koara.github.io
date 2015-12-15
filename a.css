@@ -12,3 +12,7 @@ pre { margin-bottom: 1em; word-break: normal; padding: 16px; overflow: auto; fon
 .pl-ent { color: #63a35c; }
 .pl-mi { color: #333; font-weight: bold; }
 .pl-s { color: #183691; }
+
+@media screen and (max-width: 760px) {
+    #wr { width: auto; }
+}
