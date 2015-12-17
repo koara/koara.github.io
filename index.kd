@@ -1,9 +1,9 @@
 <h1>What is koara?</h1>
 
-<p>When building a application, you can use a <a href="https://en.wikipedia.org/wiki/Lightweight_markup_language">lightweight markup language</a> to enhance the user's writing experience. 
+<p>When building an application, you can use a <a href="https://en.wikipedia.org/wiki/Lightweight_markup_language" target="_blank">lightweight markup language</a> to enhance the user's writing experience. 
 But these language are inflexible. You either allow all of the syntax or nothing. 
-This is not always appropriate, so most developers end up with a custom language or a fork of an existing language. It requires the user to 
-each time learn a different languages and jeopardizes portability between applications.</p>
+This is not always appropriate, so most developers end up with a custom language or fork of an existing language. It requires the user to 
+each time learn a different language and jeopardizes portability between applications.</p>
 
 <p>Koara is a modular lightweight markup language. The developer decides which parts of the syntax are allowed to be parsed. The rest is rendered as plain text.</p>
 
@@ -15,8 +15,8 @@ Let's take the following sentence, written in koara:
 If I configure the parser to allow all the syntax, and we parse it to HTML, this will be the outcome:
 <pre>&lt;<span class="pl-ent">p</span>&gt;The quick brown &lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>http://getfirefox.com<span class="pl-pds">"</span></span>&gt;fox&lt;/<span class="pl-ent">a</span>&gt; jumps &lt;<span class="pl-ent">strong</span>&gt;over&lt;/<span class="pl-ent">strong</span>&gt; the &lt;<span class="pl-ent">code</span>&gt;lazy&lt;/<span class="pl-ent">code</span>&gt; dog&lt;/<span class="pl-ent">p</span>&gt;</pre>
 
-If I configure the parser to allow only <a href="#">paragraphs</a> and <a href="#">formatting</a>, the output will look like this:
+If I configure the parser to allow only paragraphs and formatting, the output will look like this:
 <pre>&lt;<span class="pl-ent">p</span>&gt;The quick brown [fox](http://getfirefox.com) jumps &lt;<span class="pl-ent">strong</span>&gt;over&lt;/<span class="pl-ent">strong</span>&gt; the `lazy` dog&lt;/<span class="pl-ent">p</span>&gt;</pre>
 
-If I configure the parser to allow only <a href="#">paragraphs</a>, this will be rendered:
+If I configure the parser to allow only paragraphs, this will be rendered:
 <pre>&lt;<span class="pl-ent">p</span>&gt;The quick brown [fox](http://getfirefox.com) jumps *over* the `lazy` dog&lt;/<span class="pl-ent">p</span>&gt;</pre>

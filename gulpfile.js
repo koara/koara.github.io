@@ -3,14 +3,10 @@ var fs = require('fs'),
 	imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     rename = require('gulp-rename'),
-    sass = require('node-sass'),
     template = require('gulp-template'),
 	webserver = require('gulp-webserver');
 
 gulp.task('render', function() {
-   
-    
-    
 	_render('index', 'Koara - A Modular Lightweight Markup Language');
 	_render('docs', 'Documentation - Koara');
 	_render('grammar', 'Grammar - Koara');

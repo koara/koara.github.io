@@ -11,9 +11,9 @@
 	</head>
   	<body>
     	<div id="wr">
-    		<p><a href="/"><img src="logo.png"></a></p>
+    		<p><a href="http://www.koara.io"><img src="logo.png" alt="Koara" /></a></p>
 
-			<ul id="nv">
+			<ul class="nv">
 			  <li>Currently v0.7.0</li>
 			  <li>·</li>
 			  <li><a href="/docs.html">Docs</a></li>
@@ -22,12 +22,23 @@
 			  <li>·</li>
 			  <li><a href="/projects.html">Projects</a></li>
 			  <li>·</li>
-			  <li><a href="http://try.koara.io" target="blank">Demo</a></li>
+			  <li><a href="http://try.koara.io">Demo</a></li>
 			</ul>
 					
 			<h1>Documentation</h1>
 
-<h2>Paragraphs</h2>
+<ul>
+  <li><a href="#paragraphs">Paragraphs</a>
+  <li><a href="#headings">Headings</a>
+  <li><a href="#lists">Lists</a>
+  <li><a href="#links">Links</a>
+  <li><a href="#images">Images</a>
+  <li><a href="#formatting">Formatting</a>
+  <li><a href="#blockquotes">Blockquotes</a>
+  <li><a href="#code">Code</a>
+</ul>
+
+<h2 id="paragraphs">Paragraphs</h2>
 <p><em>Koara:</em></p>
 <pre><code>This is a simple paragraph.
 
@@ -41,10 +52,10 @@ that need a break.
 &lt;<span class="pl-ent">p</span>&gt;Use the return key for lines&lt;<span class="pl-ent">br</span>&gt;
 that need a break.&lt;/<span class="pl-ent">p</span>&gt;</pre>
 
-<p>If enabled, any default blockelement will become a paragraph. Paragraphs are separated by one or more blank lines. 
+<p>If enabled, any default block element will become a paragraph. Paragraphs are separated by one or more blank lines. 
 Koara uses return-based line breaks.<p>
 
-<h2>Headings</h2>
+<h2 id="headings">Headings</h2>
 <p><em>Koara:</em></p>
 <pre><code>= Heading 1
 == Heading 2
@@ -70,11 +81,11 @@ Koara uses return-based line breaks.<p>
 
 &lt;<span class="pl-ent">p</span>&gt;= A heading can be escaped like this.&lt;/<span class="pl-ent">p</span>&gt;</pre>
 
-<p>If enabled and a line starts with equal signs, it will be considered a heading. The maximum header-level is 6. Whitespace or blank lines are always optional.<p>
+<p>If enabled and a line starts with equal signs, it will be considered a heading. The maximum header-level is 6. Whitespace or blank lines are optional.<p>
 <p><strong>Escaping:</strong> If you don't want koara to parse an equal-sign as a heading, you can escape it, by prepending a backslash. You can also escape 
 all other characters used in the syntax.
 
-<h2>Lists</h2>
+<h2 id="lists">Lists</h2>
 <p><em>Koara:</em></p>
 <pre><code>- Item 1
 - Item 2
@@ -112,10 +123,10 @@ all other characters used in the syntax.
 <p>Unordered lists start with a dash before the item. Ordered lists start with a digit, followed by a dot. 
 You can use any digit, koara will preserve the numbering when parsed.</p>
 
-<p>To create sublist-items you have to use indentation. Default indentation is 4 spaces or a tab.
-List items can consist of multiple block elements. Because these contain blank lines, you have to use at least 2 blank lines to break out of the list or don't start the line with indentation.</p>
+<p>To create sublist-items you have to use indentation. Default indentation is 2 spaces or a tab.
+List items can consist of multiple block elements. Because these can contain blank lines, you have to use at least 2 blank lines to break out of the list or start a line without indentation.</p>
 
-<h2>Links</h2>
+<h2 id="links">Links</h2>
 <p><em>Koara:</em></p>
 <pre><code>This is an [internal link].
 This is an [inline link](http://www.google.com).
@@ -130,7 +141,7 @@ it returns an empty link, because the url should be resolved by the application.
 
 <p>Inline links are simply a combination of the link text and the url.</p>
 
-<h2>Images</h2>
+<h2 id="images">Images</h2>
 <p><em>Koara:</em></p>
 <pre><code>This is an [image:internal image]
 This is an [image:inline image](http://www.koara.io/logo.png)
@@ -144,7 +155,7 @@ This is an &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<sp
 <p>Images and links are both resources. If you configure the parser to allow links but not images, the syntax will give you a natural fallback: Images will then become links with a prefix <code>image:</code> in the title.</p>
 
 
-<h2>Formatting</h2>
+<h2 id="formatting">Formatting</h2>
 <p><em>Koara:</em></p>
 <pre><code>Koara supports *strong* and _emphasis_
 
@@ -162,7 +173,7 @@ one line&lt;/<span class="pl-ent">strong</span>&gt;&lt;/<span class="pl-ent">p</
 
 <p>Formatting can span over multiple lines. Intraword emphasis is allowed. 
 
-<h2>Blockquotes</h2>
+<h2 id="blockquotes">Blockquotes</h2>
 <p><em>Koara:</em></p>
 <pre><code>&gt; Blockquote 1
 &gt;&gt; Blockquote 2
@@ -182,7 +193,7 @@ one line&lt;/<span class="pl-ent">strong</span>&gt;&lt;/<span class="pl-ent">p</
 
 <p>If enabled, you can use email-style blockquoting. Blockquotes can also be nested.</p>
 
-<h2>Code</h2>
+<h2 id="code">Code</h2>
 <p><em>Koara:</em></p>
 <pre><code>Inline `code` works with backticks. You can also create a fenced code block
 
