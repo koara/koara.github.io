@@ -8,7 +8,7 @@ var fs = require('fs'),
 
 gulp.task('render', function() {
 	_render('index', 'Koara - A Modular Lightweight Markup Language');
-	_render('docs', 'Documentation - Koara');
+	_render('docs/index', 'Documentation - Koara');
 	_render('grammar', 'Grammar - Koara');
 	_render('projects', 'Projects - Koara');
 	_render('demo', 'Demo - Koara');
