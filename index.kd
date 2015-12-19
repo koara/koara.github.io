@@ -20,3 +20,6 @@ If I configure the parser to allow only paragraphs and formatting, the output wi
 
 If I configure the parser to allow only paragraphs, this will be rendered:
 <pre>&lt;<span class="pl-ent">p</span>&gt;The quick brown [fox](http://getfirefox.com) jumps *over* the `lazy` dog&lt;/<span class="pl-ent">p</span>&gt;</pre>
+
+<h2>License</h2>
+<p>Koara is released under version 2.0 of the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License</a>.</p>
