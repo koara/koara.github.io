@@ -1,0 +1,219 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Andy Van Den Heuvel">
+		<title>Documentation - Koara</title>
+		<link rel="stylesheet" type="text/css" href="a.css" media="all">
+		<link rel="shortcut icon" href="favicon.png" />
+	</head>
+  	<body>
+    	<div id="wr">
+    		<p><a href="http://www.koara.io"><img src="logo.png" alt="Koara" /></a></p>
+
+			<ul class="nv">
+			  <li>Currently v0.7.0</li>
+			  <li>·</li>
+			  <li><a href="/docs">Docs</a></li>
+			  <li>·</li>
+			  <li><a href="/grammar">Grammar</a></li>
+			  <li>·</li>
+			  <li><a href="/projects">Projects</a></li>
+			  <li>·</li>
+			  <li><a href="http://try.koara.io">Demo</a></li>
+			</ul>
+					
+			<h1>Documentation</h1>
+
+<ul>
+  <li><a href="#paragraphs">Paragraphs</a>
+  <li><a href="#headings">Headings</a>
+  <li><a href="#lists">Lists</a>
+  <li><a href="#links">Links</a>
+  <li><a href="#images">Images</a>
+  <li><a href="#formatting">Formatting</a>
+  <li><a href="#blockquotes">Blockquotes</a>
+  <li><a href="#code">Code</a>
+</ul>
+
+<h2 id="paragraphs">Paragraphs</h2>
+<p><em>Koara:</em></p>
+<pre><code>This is a simple paragraph.
+
+Use the return key for lines
+that need a break.
+</code></pre>
+
+<p><em>HTML:</em></p>
+<pre>&lt;<span class="pl-ent">p</span>&gt;This is a simple paragraph.&lt;/<span class="pl-ent">p</span>&gt;
+
+&lt;<span class="pl-ent">p</span>&gt;Use the return key for lines&lt;<span class="pl-ent">br</span>&gt;
+that need a break.&lt;/<span class="pl-ent">p</span>&gt;</pre>
+
+<p>If enabled, any default block element will become a paragraph. Paragraphs are separated by one or more blank lines. 
+Koara uses return-based line breaks.<p>
+
+<h2 id="headings">Headings</h2>
+<p><em>Koara:</em></p>
+<pre><code>= Heading 1
+== Heading 2
+=== Heading 3
+==== Heading 4
+===== Heading 5
+====== Heading 6
+\= A heading can be escaped like this.
+</code></pre>
+
+<p><em>HTML:</em></p>
+<pre>&lt;<span class="pl-ent">h1</span>&gt;Heading 1&lt;/<span class="pl-ent">h1</span>&gt;
+
+&lt;<span class="pl-ent">h2</span>&gt;Heading 2&lt;/<span class="pl-ent">h2</span>&gt;
+
+&lt;<span class="pl-ent">h3</span>&gt;Heading 3&lt;/<span class="pl-ent">h3</span>&gt;
+
+&lt;<span class="pl-ent">h4</span>&gt;Heading 4&lt;/<span class="pl-ent">h4</span>&gt;
+
+&lt;<span class="pl-ent">h5</span>&gt;Heading 5&lt;/<span class="pl-ent">h5</span>&gt;
+
+&lt;<span class="pl-ent">h6</span>&gt;Heading 6&lt;/<span class="pl-ent">h6</span>&gt;
+
+&lt;<span class="pl-ent">p</span>&gt;= A heading can be escaped like this.&lt;/<span class="pl-ent">p</span>&gt;</pre>
+
+<p>If enabled and a line starts with equal signs, it will be considered a heading. The maximum header-level is 6. Whitespace or blank lines are optional.<p>
+<p><strong>Escaping:</strong> If you don't want koara to parse an equal-sign as a heading, you can escape it, by prepending a backslash. You can also escape 
+all other characters used in the syntax.
+
+<h2 id="lists">Lists</h2>
+<p><em>Koara:</em></p>
+<pre><code>- Item 1
+- Item 2
+    - Item 2A
+    - Item 2B
+1. Item 1
+2. Item 2
+    1. Item 2A
+    4. Item 2B
+</code></pre>
+
+<p><em>HTML:</em></p>
+<pre>&lt;<span class="pl-ent">ul</span>&gt;
+  &lt;<span class="pl-ent">li</span>&gt;Item 1&lt;/<span class="pl-ent">li</span>&gt;
+  &lt;<span class="pl-ent">li</span>&gt;
+    &lt;<span class="pl-ent">p</span>&gt;Item 2&lt;/<span class="pl-ent">p</span>&gt;
+    &lt;<span class="pl-ent">ul</span>&gt;
+      &lt;<span class="pl-ent">li</span>&gt;Item 2A&lt;/<span class="pl-ent">li</span>&gt;
+      &lt;<span class="pl-ent">li</span>&gt;Item 2B&lt;/<span class="pl-ent">li</span>&gt;
+    &lt;/<span class="pl-ent">ul</span>&gt;
+  &lt;/<span class="pl-ent">li</span>&gt;
+&lt;/<span class="pl-ent">ul</span>&gt;
+
+&lt;<span class="pl-ent">ol</span>&gt;
+  &lt;<span class="pl-ent">li</span>&gt;Item 1&lt;/<span class="pl-ent">li</span>&gt;
+  &lt;<span class="pl-ent">li</span>&gt;
+    &lt;<span class="pl-ent">p</span>&gt;Item 2&lt;/<span class="pl-ent">p</span>&gt;
+    &lt;<span class="pl-ent">ol</span>&gt;
+      &lt;<span class="pl-ent">li</span>&gt;Item 2A&lt;/<span class="pl-ent">li</span>&gt;
+      &lt;<span class="pl-ent">li</span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">"</span>4<span class="pl-pds">"</span></span></span>&gt;Item 2B&lt;/<span class="pl-ent">li</span>&gt;
+    &lt;/<span class="pl-ent">ol</span>&gt;
+  &lt;/<span class="pl-ent">li</span>&gt;
+&lt;/<span class="pl-ent">ol</span>&gt;</pre>
+
+<p>Unordered lists start with a dash before the item. Ordered lists start with a digit, followed by a dot. 
+You can use any digit, koara will preserve the numbering when parsed.</p>
+
+<p>To create sublist-items you have to use indentation. Default indentation is 2 spaces or a tab.
+List items can consist of multiple block elements. Because these can contain blank lines, you have to use at least 2 blank lines to break out of the list or start a line without indentation.</p>
+
+<h2 id="links">Links</h2>
+<p><em>Koara:</em></p>
+<pre><code>This is an [internal link].
+This is an [inline link](http://www.google.com).
+</code></pre>
+
+<p><em>HTML:</em></p>
+<pre>&lt;<span class="pl-ent">p</span>&gt;This is an &lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;internal link&lt;/<span class="pl-ent">a</span>&gt;.&lt;<span class="pl-ent">br</span>&gt;
+This is an &lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.google.com<span class="pl-pds">"</span></span>&gt;inline link&lt;/<span class="pl-ent">a</span>&gt;.&lt;/<span class="pl-ent">p</span>&gt;</pre>
+
+<p>Koara supports internal and inline links. Internal links are useful for wiki and CMS applications. By default 
+it returns an empty link, because the url should be resolved by the application.</p>
+
+<p>Inline links are simply a combination of the link text and the url.</p>
+
+<h2 id="images">Images</h2>
+<p><em>Koara:</em></p>
+<pre><code>This is an [image:internal image]
+This is an [image:inline image](http://www.koara.io/logo.png)
+</code></pre>
+
+<p><em>HTML:</em></p>
+<pre>&lt;<span class="pl-ent">p</span>&gt;This is an &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s"><span class="pl-pds">"</span>internal image<span class="pl-pds">"</span></span> /&gt;&lt;<span class="pl-ent">br</span>&gt;
+This is an &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.koara.io/logo.png<span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s"><span class="pl-pds">"</span>inline image<span class="pl-pds">"</span></span> /&gt;&lt;/<span class="pl-ent">p</span>&gt;</pre>
+
+<p>Images work exactly the same as links, except they have an <code>image:</code> label.</p> 
+<p>Images and links are both resources. If you configure the parser to allow links but not images, the syntax will give you a natural fallback: Images will then become links with a prefix <code>image:</code> in the title.</p>
+
+
+<h2 id="formatting">Formatting</h2>
+<p><em>Koara:</em></p>
+<pre><code>Koara supports *strong* and _emphasis_
+
+You can format *more then
+one line*
+</code></pre>
+
+<p><em>HTML:</em></p>
+<pre>&lt;<span class="pl-ent">p</span>&gt;Koara supports &lt;<span class="pl-ent">strong</span>&gt;strong&lt;/<span class="pl-ent">strong</span>&gt; and &lt;<span class="pl-ent">em</span>&gt;emphasis&lt;/<span class="pl-ent">em</span>&gt;&lt;/<span class="pl-ent">p</span>&gt;
+
+&lt;<span class="pl-ent">p</span>&gt;You can format &lt;<span class="pl-ent">strong</span>&gt;more then&lt;<span class="pl-ent">br</span>&gt;
+one line&lt;/<span class="pl-ent">strong</span>&gt;&lt;/<span class="pl-ent">p</span>&gt;</pre>
+
+<p>If enabled, text between asterisks will be rendered as bold text, text between underscores will be rendered as italic text</p>
+
+<p>Formatting can span over multiple lines. Intraword emphasis is allowed. 
+
+<h2 id="blockquotes">Blockquotes</h2>
+<p><em>Koara:</em></p>
+<pre><code>&gt; Blockquote 1
+&gt;&gt; Blockquote 2
+&gt;&gt;&gt; Blockquote 3
+</code></pre>
+
+<p><em>HTML:</em></p>
+<pre>&lt;<span class="pl-ent">blockquote</span>&gt;
+  &lt;<span class="pl-ent">p</span>&gt;Blockquote 1&lt;/<span class="pl-ent">p</span>&gt;
+  &lt;<span class="pl-ent">blockquote</span>&gt;
+    &lt;<span class="pl-ent">p</span>&gt;Blockquote 2&lt;/<span class="pl-ent">p</span>&gt;
+    &lt;<span class="pl-ent">blockquote</span>&gt;
+      &lt;<span class="pl-ent">p</span>&gt;Blockquote 3&lt;/<span class="pl-ent">p</span>&gt;
+    &lt;/<span class="pl-ent">blockquote</span>&gt;
+  &lt;/<span class="pl-ent">blockquote</span>&gt;
+&lt;/<span class="pl-ent">blockquote</span>&gt;</pre>
+
+<p>If enabled, you can use email-style blockquoting. Blockquotes can also be nested.</p>
+
+<h2 id="code">Code</h2>
+<p><em>Koara:</em></p>
+<pre><code>Inline `code` works with backticks. You can also create a fenced code block
+
+```
+function greeting() {
+  console.log("Hello World");
+}
+```
+</code></pre>
+
+<p><em>HTML:</em></p>
+<pre>&lt;<span class="pl-ent">p</span>&gt;Inline &lt;<span class="pl-ent">code</span>&gt;code&lt;/<span class="pl-ent">code</span>&gt; works with backticks. You can also create a fenced code block&lt;/<span class="pl-ent">p</span>&gt;
+
+&lt;<span class="pl-ent">pre</span>&gt;&lt;<span class="pl-ent">code</span>&gt;function greeting() {
+  console.log(<span class="pl-c1">&amp;quot;</span>Hello World<span class="pl-c1">&amp;quot;</span>);
+}&lt;/<span class="pl-ent">code</span>&gt;&lt;/<span class="pl-ent">pre</span>&gt;</pre>
+
+<p>If enabled, text between backticks will be rendered as code text. This can span over multiple lines.</p>
+
+<p>Koara also support fenced code blocks. A fenced code block starts at the beginning of a line with at least 3 backticks. It can contain an optional 'language' identifier.</p>
+    	</div>
+	</body>
+</html>
