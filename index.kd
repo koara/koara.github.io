@@ -5,7 +5,8 @@ But these language are inflexible. You either allow all of the syntax or nothing
 This is not always appropriate, so most developers end up with a custom language or fork of an existing language. It requires the user to 
 each time learn a different language and jeopardizes portability between applications.</p>
 
-<p>Koara is a modular lightweight markup language. The developer decides which parts of the syntax are allowed to be parsed. The rest is rendered as plain text.</p>
+<p>Koara is a modular lightweight markup language. The developer decides which parts of the syntax are 
+allowed to be parsed. The rest is rendered as plain text.</p>
 
 <h2>How does it work?</h2>
 Let's take the following sentence, written in koara:

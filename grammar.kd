@@ -1,69 +1,69 @@
 <h1>BNF for koara</h1>
 
 <h2>TOKENS</h2>
-
-<pre>&lt;<span class="pl-ent">DEFAULT</span>&gt; TOKEN : {
- &lt;<span class="pl-ent">ASTERISK:</span> <span class="pl-s"><span class="pl-pds">"</span>*<span class="pl-pds">"</span></span>&gt;
-| &lt;<span class="pl-ent">BACKSLASH:</span> <span class="pl-s"><span class="pl-pds">"</span>\\<span class="pl-pds">"</span></span>&gt;
-| &lt;<span class="pl-ent">BACKTICK:</span> <span class="pl-s"><span class="pl-pds">"</span>`<span class="pl-pds">"</span></span>&gt;
-| &lt;<span class="pl-ent">CHAR</span>_SEQUENCE<span class="pl-e">:</span> (~[<span class="pl-s"><span class="pl-pds">"</span>*<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>\\<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>`<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>:<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>-<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>0<span class="pl-pds">"</span></span>-<span class="pl-s"><span class="pl-pds">"</span>9<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>.<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>=<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>&gt;<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>[<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>(<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>&lt;<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>]<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>)<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>_<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>\t<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>\r<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>\n<span class="pl-pds">"</span></span>])+&gt;
-| &lt;<span class="pl-ent">COLON:</span> <span class="pl-s"><span class="pl-pds">"</span>:<span class="pl-pds">"</span></span>&gt;
-| &lt;<span class="pl-ent">DASH:</span> <span class="pl-s"><span class="pl-pds">"</span>-<span class="pl-pds">"</span></span>&gt;
-| &lt;<span class="pl-ent">DIGITS:</span> ([<span class="pl-s"><span class="pl-pds">"</span>0<span class="pl-pds">"</span></span>-<span class="pl-s"><span class="pl-pds">"</span>9<span class="pl-pds">"</span></span>])+&gt;
-| &lt;<span class="pl-ent">DOT:</span> <span class="pl-s"><span class="pl-pds">"</span>.<span class="pl-pds">"</span></span>&gt;
-| &lt;<span class="pl-ent">EOL:</span> (<span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span> | <span class="pl-s"><span class="pl-pds">"</span>\t<span class="pl-pds">"</span></span>)* (<span class="pl-s"><span class="pl-pds">"</span>\r<span class="pl-pds">"</span></span> | <span class="pl-s"><span class="pl-pds">"</span>\n<span class="pl-pds">"</span></span> | <span class="pl-s"><span class="pl-pds">"</span>\r\n<span class="pl-pds">"</span></span>)&gt;
-| &lt;<span class="pl-ent">EQ:</span> <span class="pl-s"><span class="pl-pds">"</span>=<span class="pl-pds">"</span></span>&gt;
-| &lt;<span class="pl-ent">ESCAPED</span>_CHAR<span class="pl-e">:</span> <span class="pl-s"><span class="pl-pds">"</span>\\<span class="pl-pds">"</span></span> [<span class="pl-s"><span class="pl-pds">"</span>*<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>\\<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>`<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>:<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>-<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>0<span class="pl-pds">"</span></span>-<span class="pl-s"><span class="pl-pds">"</span>9<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>.<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>=<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>&gt;<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>[<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>(<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>&lt;<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>]<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>)<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>_<span class="pl-pds">"</span></span>]&gt;
-| &lt;<span class="pl-ent">GT:</span> <span class="pl-s"><span class="pl-pds">"</span>&gt;<span class="pl-pds">"</span></span>&gt;
-| &lt;<span class="pl-ent">IMAGE</span>_LABEL<span class="pl-e">:</span> <span class="pl-s"><span class="pl-pds">"</span>image:<span class="pl-pds">"</span></span>&gt;
-| &lt;<span class="pl-ent">LBRACK:</span> <span class="pl-s"><span class="pl-pds">"</span>[<span class="pl-pds">"</span></span>&gt;
-| &lt;<span class="pl-ent">LPAREN:</span> <span class="pl-s"><span class="pl-pds">"</span>(<span class="pl-pds">"</span></span>&gt;
-| &lt;<span class="pl-ent">LT:</span> <span class="pl-s"><span class="pl-pds">"</span>&lt;<span class="pl-pds">"</span></span>&gt;
-| &lt;<span class="pl-ent">RBRACK:</span> <span class="pl-s"><span class="pl-pds">"</span>]<span class="pl-pds">"</span></span>&gt;
-| &lt;<span class="pl-ent">RPAREN:</span> <span class="pl-s"><span class="pl-pds">"</span>)<span class="pl-pds">"</span></span>&gt;
-| &lt;<span class="pl-ent">SPACE:</span> <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>&gt;
-| &lt;<span class="pl-ent">TAB:</span> <span class="pl-s"><span class="pl-pds">"</span>\t<span class="pl-pds">"</span></span>&gt;
-| &lt;<span class="pl-ent">UNDERSCORE:</span> <span class="pl-s"><span class="pl-pds">"</span>_<span class="pl-pds">"</span></span>&gt;
-}</pre>
+<pre><code>&lt;DEFAULT&gt; TOKEN : {
+&lt;ASTERISK: "*"&gt;
+| &lt;BACKSLASH: "\\"&gt;
+| &lt;BACKTICK: "`"&gt;
+| &lt;CHAR_SEQUENCE: (~["*","\\","`",":","-","0"-"9",".","=","&gt;","[","(","&lt;","]",")","_"," ","\t","\r","\n"])+&gt;
+| &lt;COLON: ":"&gt;
+| &lt;DASH: "-"&gt;
+| &lt;DIGITS: (["0"-"9"])+&gt;
+| &lt;DOT: "."&gt;
+| &lt;EOL: (" " | "\t")* ("\r" | "\n" | "\r\n")&gt;
+| &lt;EQ: "="&gt;
+| &lt;ESCAPED_CHAR: "\\" ["*","\\","`",":","-","0"-"9",".","=","&gt;","[","(","&lt;","]",")","_"]&gt;
+| &lt;GT: "&gt;"&gt;
+| &lt;IMAGE_LABEL: "image:"&gt;
+| &lt;LBRACK: "["&gt;
+| &lt;LPAREN: "("&gt;
+| &lt;LT: "&lt;"&gt;
+| &lt;RBRACK: "]"&gt;
+| &lt;RPAREN: ")"&gt;
+| &lt;SPACE: " "&gt;
+| &lt;TAB: "\t"&gt;
+| &lt;UNDERSCORE: "_"&gt;
+}</code></pre>
 
 <h2>NON-TERMINALS</h2>
 
-<pre>Document ::= ( &lt;<span class="pl-ent">EOL</span>&gt; )* WhiteSpace ( BlockElement ( ( &lt;<span class="pl-ent">EOL</span>&gt; WhiteSpace )+ BlockElement )* ( &lt;<span class="pl-ent">EOL</span>&gt; )* WhiteSpace )? &lt;<span class="pl-ent">EOF</span>&gt;
+<pre><code>Document ::= ( &lt;EOL&gt; )* WhiteSpace ( BlockElement ( ( &lt;EOL&gt; WhiteSpace )+ BlockElement )* ( &lt;EOL&gt; )* WhiteSpace )? &lt;EOF&gt;
 BlockElement ::= ( Heading | Blockquote | UnorderedList | OrderedList | FencedCodeBlock | Paragraph )
-Heading ::= ( &lt;<span class="pl-ent">EQ</span>&gt; )+ WhiteSpace ( Text | Image | Link | Strong | Em | Code | LooseChar )*
-Blockquote ::= &lt;<span class="pl-ent">GT</span>&gt; ( BlockquoteEmptyLine )* WhiteSpace ( BlockElement ( ( &lt;<span class="pl-ent">EOL</span>&gt; WhiteSpace BlockquotePrefix )+ BlockElement )* )? ( BlockquoteEmptyLine )*
-BlockquotePrefix ::= ( &lt;<span class="pl-ent">GT</span>&gt; WhiteSpace )+
-BlockquoteEmptyLine ::= &lt;<span class="pl-ent">EOL</span>&gt; WhiteSpace ( &lt;<span class="pl-ent">GT</span>&gt; WhiteSpace )+
-UnorderedList ::= UnorderedListItem ( ( &lt;<span class="pl-ent">EOL</span>&gt; )+ WhiteSpace UnorderedListItem )*
-UnorderedListItem ::= &lt;<span class="pl-ent">DASH</span>&gt; WhiteSpace ( BlockElement ( ( &lt;<span class="pl-ent">EOL</span>&gt; WhiteSpace ( BlockquotePrefix )? )+ BlockElement )* )?
-OrderedList ::= OrderedListItem ( ( &lt;<span class="pl-ent">EOL</span>&gt; )+ WhiteSpace OrderedListItem )*
-OrderedListItem ::= ( &lt;<span class="pl-ent">DIGITS</span>&gt; ) &lt;<span class="pl-ent">DOT</span>&gt; WhiteSpace ( BlockElement ( ( &lt;<span class="pl-ent">EOL</span>&gt; WhiteSpace ( BlockquotePrefix )? )+ BlockElement )* )?
-FencedCodeBlock ::= &lt;<span class="pl-ent">BACKTICK</span>&gt; &lt;<span class="pl-ent">BACKTICK</span>&gt; ( &lt;<span class="pl-ent">BACKTICK</span>&gt; )+ WhiteSpace ( ( CodeLanguage ) )? ( &lt;<span class="pl-ent">EOL</span>&gt; LevelWhiteSpace )? ( &lt;<span class="pl-ent">ASTERISK</span>&gt; | &lt;<span class="pl-ent">BACKSLASH</span>&gt; | &lt;<span class="pl-ent">CHAR</span>_SEQUENCE&gt; | &lt;<span class="pl-ent">COLON</span>&gt; | &lt;<span class="pl-ent">DASH</span>&gt; | &lt;<span class="pl-ent">DIGITS</span>&gt; | &lt;<span class="pl-ent">DOT</span>&gt; | &lt;<span class="pl-ent">EQ</span>&gt; | &lt;<span class="pl-ent">ESCAPED</span>_CHAR&gt; | &lt;<span class="pl-ent">IMAGE</span>_LABEL&gt; | &lt;<span class="pl-ent">LT</span>&gt; | &lt;<span class="pl-ent">GT</span>&gt; | &lt;<span class="pl-ent">LBRACK</span>&gt; | &lt;<span class="pl-ent">RBRACK</span>&gt; | &lt;<span class="pl-ent">LPAREN</span>&gt; | &lt;<span class="pl-ent">RPAREN</span>&gt; | &lt;<span class="pl-ent">UNDERSCORE</span>&gt; | &lt;<span class="pl-ent">BACKTICK</span>&gt; | ( &lt;<span class="pl-ent">SPACE</span>&gt; | &lt;<span class="pl-ent">TAB</span>&gt; ) | ( &lt;<span class="pl-ent">EOL</span>&gt; LevelWhiteSpace ) )* ( &lt;<span class="pl-ent">EOL</span>&gt; WhiteSpace &lt;<span class="pl-ent">BACKTICK</span>&gt; &lt;<span class="pl-ent">BACKTICK</span>&gt; ( &lt;<span class="pl-ent">BACKTICK</span>&gt; )+ )?
-LevelWhiteSpace ::= ( ( &lt;<span class="pl-ent">SPACE</span>&gt; | &lt;<span class="pl-ent">TAB</span>&gt; ) )*
-CodeLanguage ::= ( ( &lt;<span class="pl-ent">CHAR</span>_SEQUENCE&gt; | &lt;<span class="pl-ent">BACKTICK</span>&gt; ) )+
-Paragraph ::= Inline ( LineBreak WhiteSpace ( &lt;<span class="pl-ent">GT</span>&gt; WhiteSpace )* Inline )*
+Heading ::= ( &lt;EQ&gt; )+ WhiteSpace ( Text | Image | Link | Strong | Em | Code | LooseChar )*
+Blockquote ::= &lt;GT&gt; ( BlockquoteEmptyLine )* WhiteSpace ( BlockElement ( ( &lt;EOL&gt; WhiteSpace BlockquotePrefix )+ BlockElement )* )? ( BlockquoteEmptyLine )*
+BlockquotePrefix ::= ( &lt;GT&gt; WhiteSpace )+
+BlockquoteEmptyLine ::= &lt;EOL&gt; WhiteSpace ( &lt;GT&gt; WhiteSpace )+
+UnorderedList ::= UnorderedListItem ( ( &lt;EOL&gt; )+ ( &lt;GT&gt; )* WhiteSpace UnorderedListItem )*
+UnorderedListItem ::= &lt;DASH&gt; WhiteSpace ( BlockElement ( ( &lt;EOL&gt; WhiteSpace ( BlockquotePrefix )? )+ BlockElement )* )?
+OrderedList ::= OrderedListItem ( ( &lt;EOL&gt; )+ ( &lt;GT&gt; )* WhiteSpace OrderedListItem )*
+OrderedListItem ::= ( &lt;DIGITS&gt; ) &lt;DOT&gt; WhiteSpace ( BlockElement ( ( &lt;EOL&gt; WhiteSpace ( BlockquotePrefix )? )+ BlockElement )* )?
+FencedCodeBlock ::= &lt;BACKTICK&gt; &lt;BACKTICK&gt; ( &lt;BACKTICK&gt; )+ WhiteSpace ( ( CodeLanguage ) )? ( &lt;EOL&gt; LevelWhiteSpace )? ( &lt;ASTERISK&gt; | &lt;BACKSLASH&gt; | &lt;CHAR_SEQUENCE&gt; | &lt;COLON&gt; | &lt;DASH&gt; | &lt;DIGITS&gt; | &lt;DOT&gt; | &lt;EQ&gt; | &lt;ESCAPED_CHAR&gt; | &lt;IMAGE_LABEL&gt; | &lt;LT&gt; | &lt;GT&gt; | &lt;LBRACK&gt; | &lt;RBRACK&gt; | &lt;LPAREN&gt; | &lt;RPAREN&gt; | &lt;UNDERSCORE&gt; | &lt;BACKTICK&gt; | ( &lt;SPACE&gt; | &lt;TAB&gt; ) | ( &lt;EOL&gt; LevelWhiteSpace ) )* ( &lt;EOL&gt; WhiteSpace ( &lt;GT&gt; WhiteSpace )* &lt;BACKTICK&gt; &lt;BACKTICK&gt; ( &lt;BACKTICK&gt; )+ )?
+LevelWhiteSpace ::= ( &lt;GT&gt; )* ( ( &lt;SPACE&gt; | &lt;TAB&gt; ) )*
+CodeLanguage ::= ( ( &lt;ASTERISK&gt; | &lt;BACKSLASH&gt; | &lt;CHAR_SEQUENCE&gt; | &lt;COLON&gt; | &lt;DASH&gt; | &lt;DIGITS&gt; | &lt;DOT&gt; | &lt;EQ&gt; | &lt;ESCAPED_CHAR&gt; | &lt;IMAGE_LABEL&gt; | &lt;LT&gt; | &lt;GT&gt; | &lt;LBRACK&gt; | &lt;RBRACK&gt; | &lt;LPAREN&gt; | &lt;RPAREN&gt; | &lt;UNDERSCORE&gt; | &lt;BACKTICK&gt; ) )+
+Paragraph ::= Inline ( LineBreak WhiteSpace ( &lt;GT&gt; WhiteSpace )* Inline )*
 Inline ::= ( Text | Image | Link | StrongMultiline | EmMultiline | CodeMultiline | LooseChar )+
-Image ::= &lt;<span class="pl-ent">LBRACK</span>&gt; WhiteSpace &lt;<span class="pl-ent">IMAGE</span>_LABEL&gt; WhiteSpace ( ResourceText | LooseChar )+ WhiteSpace &lt;<span class="pl-ent">RBRACK</span>&gt; ( ( ResourceUrl ) )?
-Link ::= &lt;<span class="pl-ent">LBRACK</span>&gt; WhiteSpace ( ( Image ) | Strong | Em | Code | ResourceText | LooseChar )+ WhiteSpace &lt;<span class="pl-ent">RBRACK</span>&gt; ( ( ResourceUrl ) )?
-ResourceText ::= ( ( &lt;<span class="pl-ent">BACKSLASH</span>&gt; | &lt;<span class="pl-ent">COLON</span>&gt; | &lt;<span class="pl-ent">CHAR</span>_SEQUENCE&gt; | &lt;<span class="pl-ent">DASH</span>&gt; | &lt;<span class="pl-ent">DIGITS</span>&gt; | &lt;<span class="pl-ent">DOT</span>&gt; | &lt;<span class="pl-ent">EQ</span>&gt; | &lt;<span class="pl-ent">ESCAPED</span>_CHAR&gt; | &lt;<span class="pl-ent">IMAGE</span>_LABEL&gt; | &lt;<span class="pl-ent">GT</span>&gt; | &lt;<span class="pl-ent">LPAREN</span>&gt; | &lt;<span class="pl-ent">LT</span>&gt; | &lt;<span class="pl-ent">RPAREN</span>&gt; | ( &lt;<span class="pl-ent">SPACE</span>&gt; | &lt;<span class="pl-ent">TAB</span>&gt; ) ) )+
-ResourceUrl ::= &lt;<span class="pl-ent">LPAREN</span>&gt; WhiteSpace ResourceUrlText WhiteSpace &lt;<span class="pl-ent">RPAREN</span>&gt;
-ResourceUrlText ::= ( &lt;<span class="pl-ent">ASTERISK</span>&gt; | &lt;<span class="pl-ent">BACKSLASH</span>&gt; | &lt;<span class="pl-ent">BACKTICK</span>&gt; | &lt;<span class="pl-ent">CHAR</span>_SEQUENCE&gt; | &lt;<span class="pl-ent">COLON</span>&gt; | &lt;<span class="pl-ent">DASH</span>&gt; | &lt;<span class="pl-ent">DIGITS</span>&gt; | &lt;<span class="pl-ent">DOT</span>&gt; | &lt;<span class="pl-ent">EQ</span>&gt; | &lt;<span class="pl-ent">ESCAPED</span>_CHAR&gt; | &lt;<span class="pl-ent">IMAGE</span>_LABEL&gt; | &lt;<span class="pl-ent">GT</span>&gt; | &lt;<span class="pl-ent">LBRACK</span>&gt; | &lt;<span class="pl-ent">LPAREN</span>&gt; | &lt;<span class="pl-ent">LT</span>&gt; | &lt;<span class="pl-ent">RBRACK</span>&gt; | &lt;<span class="pl-ent">UNDERSCORE</span>&gt; | ( &lt;<span class="pl-ent">SPACE</span>&gt; | &lt;<span class="pl-ent">TAB</span>&gt; ) )*
-StrongMultiline ::= &lt;<span class="pl-ent">ASTERISK</span>&gt; StrongMultilineContent ( LineBreak StrongMultilineContent )* &lt;<span class="pl-ent">ASTERISK</span>&gt;
-StrongMultilineContent ::= ( Text | Image | Link | Code | EmWithinStrongMultiline | &lt;<span class="pl-ent">BACKTICK</span>&gt; | &lt;<span class="pl-ent">LBRACK</span>&gt; | &lt;<span class="pl-ent">UNDERSCORE</span>&gt; )+
-StrongWithinEmMultiline ::= &lt;<span class="pl-ent">ASTERISK</span>&gt; StrongWithinEmMultilineContent ( LineBreak StrongWithinEmMultilineContent )* &lt;<span class="pl-ent">ASTERISK</span>&gt;
-StrongWithinEmMultilineContent ::= ( Text | Image | Link | Code | &lt;<span class="pl-ent">BACKTICK</span>&gt; | &lt;<span class="pl-ent">LBRACK</span>&gt; | &lt;<span class="pl-ent">UNDERSCORE</span>&gt; )+
-Strong ::= &lt;<span class="pl-ent">ASTERISK</span>&gt; ( Text | Image | Link | CodeMultiline | EmWithinStrong | &lt;<span class="pl-ent">BACKTICK</span>&gt; | &lt;<span class="pl-ent">LBRACK</span>&gt; | &lt;<span class="pl-ent">UNDERSCORE</span>&gt; )+ &lt;<span class="pl-ent">ASTERISK</span>&gt;
-StrongWithinEm ::= &lt;<span class="pl-ent">ASTERISK</span>&gt; ( Text | Image | Link | Code | &lt;<span class="pl-ent">BACKTICK</span>&gt; | &lt;<span class="pl-ent">LBRACK</span>&gt; | &lt;<span class="pl-ent">UNDERSCORE</span>&gt; )+ &lt;<span class="pl-ent">ASTERISK</span>&gt;
-EmMultiline ::= &lt;<span class="pl-ent">UNDERSCORE</span>&gt; EmMultilineContent ( LineBreak EmMultilineContent )* &lt;<span class="pl-ent">UNDERSCORE</span>&gt;
-EmMultilineContent ::= ( Text | Image | Link | CodeMultiline | StrongWithinEmMultiline | &lt;<span class="pl-ent">ASTERISK</span>&gt; | &lt;<span class="pl-ent">BACKTICK</span>&gt; | &lt;<span class="pl-ent">LBRACK</span>&gt; )+
-EmWithinStrongMultiline ::= &lt;<span class="pl-ent">UNDERSCORE</span>&gt; EmWithinStrongMultilineContent ( LineBreak EmWithinStrongMultilineContent )* &lt;<span class="pl-ent">UNDERSCORE</span>&gt;
-EmWithinStrongMultilineContent ::= ( Text | Image | Link | Code | &lt;<span class="pl-ent">ASTERISK</span>&gt; | &lt;<span class="pl-ent">BACKTICK</span>&gt; | &lt;<span class="pl-ent">LBRACK</span>&gt; )+
-Em ::= &lt;<span class="pl-ent">UNDERSCORE</span>&gt; ( Text | Image | Link | Code | StrongWithinEm | &lt;<span class="pl-ent">ASTERISK</span>&gt; | &lt;<span class="pl-ent">BACKTICK</span>&gt; | &lt;<span class="pl-ent">LBRACK</span>&gt; )+ &lt;<span class="pl-ent">UNDERSCORE</span>&gt;
-EmWithinStrong ::= &lt;<span class="pl-ent">UNDERSCORE</span>&gt; ( Text | Image | Link | Code | &lt;<span class="pl-ent">ASTERISK</span>&gt; | &lt;<span class="pl-ent">BACKTICK</span>&gt; | &lt;<span class="pl-ent">LBRACK</span>&gt; )+ &lt;<span class="pl-ent">UNDERSCORE</span>&gt;
-CodeMultiline ::= &lt;<span class="pl-ent">BACKTICK</span>&gt; CodeText ( LineBreak WhiteSpace ( &lt;<span class="pl-ent">GT</span>&gt; WhiteSpace )* CodeText )* &lt;<span class="pl-ent">BACKTICK</span>&gt;
-Code ::= &lt;<span class="pl-ent">BACKTICK</span>&gt; CodeText &lt;<span class="pl-ent">BACKTICK</span>&gt;
-CodeText ::= ( &lt;<span class="pl-ent">ASTERISK</span>&gt; | &lt;<span class="pl-ent">BACKSLASH</span>&gt; | &lt;<span class="pl-ent">CHAR</span>_SEQUENCE&gt; | &lt;<span class="pl-ent">COLON</span>&gt; | &lt;<span class="pl-ent">DASH</span>&gt; | &lt;<span class="pl-ent">DIGITS</span>&gt; | &lt;<span class="pl-ent">DOT</span>&gt; | &lt;<span class="pl-ent">EQ</span>&gt; | &lt;<span class="pl-ent">ESCAPED</span>_CHAR&gt; | &lt;<span class="pl-ent">IMAGE</span>_LABEL&gt; | &lt;<span class="pl-ent">LT</span>&gt; | &lt;<span class="pl-ent">LBRACK</span>&gt; | &lt;<span class="pl-ent">RBRACK</span>&gt; | &lt;<span class="pl-ent">LPAREN</span>&gt; | &lt;<span class="pl-ent">GT</span>&gt; | &lt;<span class="pl-ent">RPAREN</span>&gt; | &lt;<span class="pl-ent">UNDERSCORE</span>&gt; | ( &lt;<span class="pl-ent">SPACE</span>&gt; | &lt;<span class="pl-ent">TAB</span>&gt; ) )+
-Text ::= ( ( &lt;<span class="pl-ent">BACKSLASH</span>&gt; | &lt;<span class="pl-ent">CHAR</span>_SEQUENCE&gt; | &lt;<span class="pl-ent">COLON</span>&gt; | &lt;<span class="pl-ent">DASH</span>&gt; | &lt;<span class="pl-ent">DIGITS</span>&gt; | &lt;<span class="pl-ent">DOT</span>&gt; | &lt;<span class="pl-ent">EQ</span>&gt; | &lt;<span class="pl-ent">ESCAPED</span>_CHAR&gt; | &lt;<span class="pl-ent">GT</span>&gt; | &lt;<span class="pl-ent">IMAGE</span>_LABEL&gt; | &lt;<span class="pl-ent">LPAREN</span>&gt; | &lt;<span class="pl-ent">LT</span>&gt; | &lt;<span class="pl-ent">RBRACK</span>&gt; | &lt;<span class="pl-ent">RPAREN</span>&gt; | ( &lt;<span class="pl-ent">SPACE</span>&gt; | &lt;<span class="pl-ent">TAB</span>&gt; ) ) )+
-LooseChar ::= ( &lt;<span class="pl-ent">ASTERISK</span>&gt; | &lt;<span class="pl-ent">BACKTICK</span>&gt; | &lt;<span class="pl-ent">LBRACK</span>&gt; | &lt;<span class="pl-ent">UNDERSCORE</span>&gt; )
-LineBreak ::= ( &lt;<span class="pl-ent">SPACE</span>&gt; | &lt;<span class="pl-ent">TAB</span>&gt; )* &lt;<span class="pl-ent">EOL</span>&gt;
-WhiteSpace ::= ( ( &lt;<span class="pl-ent">SPACE</span>&gt; | &lt;<span class="pl-ent">TAB</span>&gt; ) )*</pre>
+Image ::= &lt;LBRACK&gt; WhiteSpace &lt;IMAGE_LABEL&gt; WhiteSpace ( ResourceText | LooseChar )+ WhiteSpace &lt;RBRACK&gt; ( ( ResourceUrl ) )?
+Link ::= &lt;LBRACK&gt; WhiteSpace ( ( Image ) | Strong | Em | Code | ResourceText | LooseChar )+ WhiteSpace &lt;RBRACK&gt; ( ( ResourceUrl ) )?
+ResourceText ::= ( ( &lt;BACKSLASH&gt; | &lt;COLON&gt; | &lt;CHAR_SEQUENCE&gt; | &lt;DASH&gt; | &lt;DIGITS&gt; | &lt;DOT&gt; | &lt;EQ&gt; | &lt;ESCAPED_CHAR&gt; | &lt;IMAGE_LABEL&gt; | &lt;GT&gt; | &lt;LPAREN&gt; | &lt;LT&gt; | &lt;RPAREN&gt; | ( &lt;SPACE&gt; | &lt;TAB&gt; ) ) )+
+ResourceUrl ::= &lt;LPAREN&gt; WhiteSpace ResourceUrlText WhiteSpace &lt;RPAREN&gt;
+ResourceUrlText ::= ( &lt;ASTERISK&gt; | &lt;BACKSLASH&gt; | &lt;BACKTICK&gt; | &lt;CHAR_SEQUENCE&gt; | &lt;COLON&gt; | &lt;DASH&gt; | &lt;DIGITS&gt; | &lt;DOT&gt; | &lt;EQ&gt; | &lt;ESCAPED_CHAR&gt; | &lt;IMAGE_LABEL&gt; | &lt;GT&gt; | &lt;LBRACK&gt; | &lt;LPAREN&gt; | &lt;LT&gt; | &lt;RBRACK&gt; | &lt;UNDERSCORE&gt; | ( &lt;SPACE&gt; | &lt;TAB&gt; ) )*
+StrongMultiline ::= &lt;ASTERISK&gt; StrongMultilineContent ( LineBreak StrongMultilineContent )* &lt;ASTERISK&gt;
+StrongMultilineContent ::= ( Text | Image | Link | Code | EmWithinStrongMultiline | &lt;BACKTICK&gt; | &lt;LBRACK&gt; | &lt;UNDERSCORE&gt; )+
+StrongWithinEmMultiline ::= &lt;ASTERISK&gt; StrongWithinEmMultilineContent ( LineBreak StrongWithinEmMultilineContent )* &lt;ASTERISK&gt;
+StrongWithinEmMultilineContent ::= ( Text | Image | Link | Code | &lt;BACKTICK&gt; | &lt;LBRACK&gt; | &lt;UNDERSCORE&gt; )+
+Strong ::= &lt;ASTERISK&gt; ( Text | Image | Link | CodeMultiline | EmWithinStrong | &lt;BACKTICK&gt; | &lt;LBRACK&gt; | &lt;UNDERSCORE&gt; )+ &lt;ASTERISK&gt;
+StrongWithinEm ::= &lt;ASTERISK&gt; ( Text | Image | Link | Code | &lt;BACKTICK&gt; | &lt;LBRACK&gt; | &lt;UNDERSCORE&gt; )+ &lt;ASTERISK&gt;
+EmMultiline ::= &lt;UNDERSCORE&gt; EmMultilineContent ( LineBreak EmMultilineContent )* &lt;UNDERSCORE&gt;
+EmMultilineContent ::= ( Text | Image | Link | CodeMultiline | StrongWithinEmMultiline | &lt;ASTERISK&gt; | &lt;BACKTICK&gt; | &lt;LBRACK&gt; )+
+EmWithinStrongMultiline ::= &lt;UNDERSCORE&gt; EmWithinStrongMultilineContent ( LineBreak EmWithinStrongMultilineContent )* &lt;UNDERSCORE&gt;
+EmWithinStrongMultilineContent ::= ( Text | Image | Link | Code | &lt;ASTERISK&gt; | &lt;BACKTICK&gt; | &lt;LBRACK&gt; )+
+Em ::= &lt;UNDERSCORE&gt; ( Text | Image | Link | Code | StrongWithinEm | &lt;ASTERISK&gt; | &lt;BACKTICK&gt; | &lt;LBRACK&gt; )+ &lt;UNDERSCORE&gt;
+EmWithinStrong ::= &lt;UNDERSCORE&gt; ( Text | Image | Link | Code | &lt;ASTERISK&gt; | &lt;BACKTICK&gt; | &lt;LBRACK&gt; )+ &lt;UNDERSCORE&gt;
+CodeMultiline ::= &lt;BACKTICK&gt; CodeText ( LineBreak WhiteSpace ( &lt;GT&gt; WhiteSpace )* CodeText )* &lt;BACKTICK&gt;
+Code ::= &lt;BACKTICK&gt; CodeText &lt;BACKTICK&gt;
+CodeText ::= ( &lt;ASTERISK&gt; | &lt;BACKSLASH&gt; | &lt;CHAR_SEQUENCE&gt; | &lt;COLON&gt; | &lt;DASH&gt; | &lt;DIGITS&gt; | &lt;DOT&gt; | &lt;EQ&gt; | &lt;ESCAPED_CHAR&gt; | &lt;IMAGE_LABEL&gt; | &lt;LT&gt; | &lt;LBRACK&gt; | &lt;RBRACK&gt; | &lt;LPAREN&gt; | &lt;GT&gt; | &lt;RPAREN&gt; | &lt;UNDERSCORE&gt; | ( &lt;SPACE&gt; | &lt;TAB&gt; ) )+
+Text ::= ( ( &lt;BACKSLASH&gt; | &lt;CHAR_SEQUENCE&gt; | &lt;COLON&gt; | &lt;DASH&gt; | &lt;DIGITS&gt; | &lt;DOT&gt; | &lt;EQ&gt; | &lt;ESCAPED_CHAR&gt; | &lt;GT&gt; | &lt;IMAGE_LABEL&gt; | &lt;LPAREN&gt; | &lt;LT&gt; | &lt;RBRACK&gt; | &lt;RPAREN&gt; | ( &lt;SPACE&gt; | &lt;TAB&gt; ) ) )+
+LooseChar ::= ( &lt;ASTERISK&gt; | &lt;BACKTICK&gt; | &lt;LBRACK&gt; | &lt;UNDERSCORE&gt; )
+LineBreak ::= ( &lt;SPACE&gt; | &lt;TAB&gt; )* &lt;EOL&gt;
+WhiteSpace ::= ( ( &lt;SPACE&gt; | &lt;TAB&gt; ) )*
+</code></pre>
