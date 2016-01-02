@@ -54,8 +54,8 @@ Koara uses return-based line breaks.<p>
 
 &lt;<span class="pl-ent">p</span>&gt;= A heading can be escaped like this.&lt;/<span class="pl-ent">p</span>&gt;</pre>
 
-<p>If enabled and a line starts with equal signs, it will be considered a heading. The maximum header-level is 6. Whitespace or blank lines are optional.<p>
-<p><strong>Escaping:</strong> If you don't want koara to parse an equal-sign as a heading, you can escape it, by prepending a backslash. You can also escape 
+<p>If enabled and a line starts with equal signs, it is considered a heading. The maximum heading level is 6. Whitespace or blank lines are always optional in koara.<p>
+<p><strong>Escaping:</strong> If you don't want koara to parse a line as a heading, you can escape the equal sign by prepending a backslash. You can also escape 
 all other characters used in the syntax.
 
 <h2 id="lists">Lists</h2>
@@ -97,7 +97,7 @@ all other characters used in the syntax.
 You can use any digit, koara will preserve the numbering when parsed.</p>
 
 <p>To create sublist-items you have to use indentation. Default indentation is 2 spaces or a tab.
-List items can consist of multiple block elements. Because these can contain blank lines, you have to use at least 2 blank lines to break out of the list or start a line without indentation.</p>
+List items can consist of multiple block elements. Because these can contain blank lines, you have to use at least 2 blank lines to break out of the list or start a new block without indentation.</p>
 
 <h2 id="links">Links</h2>
 <p><em>Koara:</em></p>
@@ -170,7 +170,7 @@ one line&lt;/<span class="pl-ent">strong</span>&gt;&lt;/<span class="pl-ent">p</
 <p><em>Koara:</em></p>
 <pre><code>Inline `code` works with backticks. You can also create a fenced code block
 
-```
+```java
 function greeting() {
   console.log("Hello World");
 }
@@ -178,12 +178,10 @@ function greeting() {
 </code></pre>
 
 <p><em>HTML:</em></p>
-<pre>&lt;<span class="pl-ent">p</span>&gt;Inline &lt;<span class="pl-ent">code</span>&gt;code&lt;/<span class="pl-ent">code</span>&gt; works with backticks. You can also create a fenced code block&lt;/<span class="pl-ent">p</span>&gt;
-
-&lt;<span class="pl-ent">pre</span>&gt;&lt;<span class="pl-ent">code</span>&gt;function greeting() {
+<pre>&lt;<span class="pl-ent">pre</span>&gt;&lt;<span class="pl-ent">code</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>language-java<span class="pl-pds">"</span></span>&gt;function greeting() {
   console.log(<span class="pl-c1">&amp;quot;</span>Hello World<span class="pl-c1">&amp;quot;</span>);
 }&lt;/<span class="pl-ent">code</span>&gt;&lt;/<span class="pl-ent">pre</span>&gt;</pre>
 
-<p>If enabled, text between backticks will be rendered as code text. This can span over multiple lines.</p>
+<p>If enabled, text between backticks will be rendered as code text. It can span over multiple lines.</p>
 
 <p>Koara also support fenced code blocks. A fenced code block starts at the beginning of a line with at least 3 backticks. It can contain an optional 'language' identifier.</p>

@@ -7,7 +7,7 @@ var fs = require('fs'),
 	webserver = require('gulp-webserver');
 
 gulp.task('render', function() {
-	_render('index', 'Koara - A Modular Lightweight Markup Language');
+	_render('index', 'Koara - A modular lightweight markup language');
 	_render('docs', 'Documentation - Koara');
 	_render('grammar', 'Grammar - Koara');
 	_render('projects', 'Projects - Koara');
