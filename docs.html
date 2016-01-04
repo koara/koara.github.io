@@ -137,7 +137,7 @@ This is an [inline link](http://www.google.com).
 This is an &lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.google.com<span class="pl-pds">"</span></span>&gt;inline link&lt;/<span class="pl-ent">a</span>&gt;.&lt;/<span class="pl-ent">p</span>&gt;</pre>
 
 <p>Koara supports internal and inline links. Internal links are useful for wiki and CMS applications. By default 
-it returns an empty link, because the url should be resolved by the application.</p>
+it returns an empty link because the url should be resolved by the application.</p>
 
 <p>Inline links are simply a combination of the link text and the url.</p>
 
@@ -151,7 +151,7 @@ This is an [image:inline image](http://www.koara.io/logo.png)
 <pre>&lt;<span class="pl-ent">p</span>&gt;This is an &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s"><span class="pl-pds">"</span>internal image<span class="pl-pds">"</span></span> /&gt;&lt;<span class="pl-ent">br</span>&gt;
 This is an &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.koara.io/logo.png<span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s"><span class="pl-pds">"</span>inline image<span class="pl-pds">"</span></span> /&gt;&lt;/<span class="pl-ent">p</span>&gt;</pre>
 
-<p>Images work exactly the same as links, except they have an <code>image:</code> label.</p> 
+<p>Images work exactly the same as links except they have an <code>image:</code> label.</p> 
 <p>Images and links are both resources. If you configure the parser to allow links but not images, the syntax will give you a natural fallback: Images will then become links with a prefix <code>image:</code> in the title.</p>
 
 
@@ -171,7 +171,7 @@ one line&lt;/<span class="pl-ent">strong</span>&gt;&lt;/<span class="pl-ent">p</
 
 <p>If enabled, text between asterisks will be rendered as bold text, text between underscores will be rendered as italic text</p>
 
-<p>Formatting can span over multiple lines. Intraword emphasis is allowed. 
+<p>Formatting can span over multiple lines, and intraword emphasis is allowed. 
 
 <h2 id="blockquotes">Blockquotes</h2>
 <p><em>Koara:</em></p>
