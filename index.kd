@@ -1,4 +1,4 @@
-<h1>What is koara?</h1>
+<h1>What is Koara?</h1>
 
 <p>When building an application you can use a <a href="https://en.wikipedia.org/wiki/Lightweight_markup_language" target="_blank">lightweight markup language</a> to enhance the user's writing experience. 
 But these languages are inflexible. You either allow all the syntax or nothing. 
@@ -9,7 +9,7 @@ each time learn a different language and jeopardizes portability between applica
 allowed to be parsed. The rest will render as plain text.</p>
 
 <h2>How does it work?</h2>
-Let's take the following sentence, written in koara:
+Let's take the following sentence, written in Koara:
 
 <pre>The quick brown [<span class="pl-e">fox</span>](http://getfirefox.com) jumps <span class="pl-mi">*over*</span> the <span class="pl-c1">`lazy`</span> dog</pre>
 

@@ -1,4 +1,4 @@
-<h1>BNF for koara</h1>
+<h1>BNF for Koara</h1>
 
 <h2>TOKENS</h2>
 <pre><code>&lt;DEFAULT&gt; TOKEN : {
