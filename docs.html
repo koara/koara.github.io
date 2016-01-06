@@ -53,7 +53,7 @@ that need a break.
 &lt;<span class="pl-ent">p</span>&gt;Use the return key for lines&lt;<span class="pl-ent">br</span>&gt;
 that need a break.&lt;/<span class="pl-ent">p</span>&gt;</pre>
 
-<p>If enabled, any default block element will become a paragraph. Paragraphs are separated by one or more blank lines. 
+<p>If enabled, any default block element will become a paragraph. Paragraphs are separated by one or more blank lines.
 Koara uses return-based line breaks.<p>
 
 <h2 id="headings">Headings</h2>
@@ -83,7 +83,7 @@ Koara uses return-based line breaks.<p>
 &lt;<span class="pl-ent">p</span>&gt;= A heading can be escaped like this.&lt;/<span class="pl-ent">p</span>&gt;</pre>
 
 <p>If enabled and a line starts with equal signs, it is considered a heading. The largest heading level is 6. Whitespace or blank lines are always optional in Koara.<p>
-<p><strong>Escaping:</strong> If you don't want Koara to parse a line as a heading, escape the equal sign by prepending a backslash. You can also escape 
+<p><strong>Escaping:</strong> If you don't want Koara to parse a line as a heading, escape the equal sign by prepending a backslash. You can also escape
 all other characters used in the syntax.
 
 <h2 id="lists">Lists</h2>
@@ -121,7 +121,7 @@ all other characters used in the syntax.
   &lt;/<span class="pl-ent">li</span>&gt;
 &lt;/<span class="pl-ent">ol</span>&gt;</pre>
 
-<p>Unordered lists start with a dash before the item. Ordered lists start with a digit, followed by a dot. 
+<p>Unordered lists start with a dash before the item. Ordered lists start with a digit, followed by a dot.
 You can use any digit, Koara will preserve the numbering when parsed.</p>
 
 <p>To create sublist-items you have to use indentation. Default indentation is 2 spaces or a tab.
@@ -137,7 +137,7 @@ This is an [inline link](http://www.google.com).
 <pre>&lt;<span class="pl-ent">p</span>&gt;This is an &lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;internal link&lt;/<span class="pl-ent">a</span>&gt;.&lt;<span class="pl-ent">br</span>&gt;
 This is an &lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.google.com<span class="pl-pds">"</span></span>&gt;inline link&lt;/<span class="pl-ent">a</span>&gt;.&lt;/<span class="pl-ent">p</span>&gt;</pre>
 
-<p>Koara supports internal and inline links. Internal links are useful for wiki and CMS applications. By default 
+<p>Koara supports internal and inline links. Internal links are useful for wiki and CMS applications. By default
 it returns an empty link because the url should be resolved by the application.</p>
 
 <p>Inline links are simply a combination of the link text and the url.</p>
@@ -152,7 +152,7 @@ This is an [image:inline image](http://www.koara.io/logo.png)
 <pre>&lt;<span class="pl-ent">p</span>&gt;This is an &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s"><span class="pl-pds">"</span>internal image<span class="pl-pds">"</span></span> /&gt;&lt;<span class="pl-ent">br</span>&gt;
 This is an &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.koara.io/logo.png<span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s"><span class="pl-pds">"</span>inline image<span class="pl-pds">"</span></span> /&gt;&lt;/<span class="pl-ent">p</span>&gt;</pre>
 
-<p>Images work exactly the same as links except they have an <code>image:</code> label.</p> 
+<p>Images work exactly the same as links except they have an <code>image:</code> label.</p>
 <p>Images and links are both resources. If you configure the parser to allow links but not images, the syntax will give you a natural fallback: Images will then become links with a prefix <code>image:</code> in the title.</p>
 
 
@@ -160,19 +160,19 @@ This is an &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<sp
 <p><em>Koara:</em></p>
 <pre><code>Koara supports *strong* and _emphasis_
 
-You can format *more then
+You can format *more than
 one line*
 </code></pre>
 
 <p><em>HTML:</em></p>
 <pre>&lt;<span class="pl-ent">p</span>&gt;Koara supports &lt;<span class="pl-ent">strong</span>&gt;strong&lt;/<span class="pl-ent">strong</span>&gt; and &lt;<span class="pl-ent">em</span>&gt;emphasis&lt;/<span class="pl-ent">em</span>&gt;&lt;/<span class="pl-ent">p</span>&gt;
 
-&lt;<span class="pl-ent">p</span>&gt;You can format &lt;<span class="pl-ent">strong</span>&gt;more then&lt;<span class="pl-ent">br</span>&gt;
+&lt;<span class="pl-ent">p</span>&gt;You can format &lt;<span class="pl-ent">strong</span>&gt;more than&lt;<span class="pl-ent">br</span>&gt;
 one line&lt;/<span class="pl-ent">strong</span>&gt;&lt;/<span class="pl-ent">p</span>&gt;</pre>
 
 <p>If enabled, text between asterisks will be rendered as bold text, text between underscores will be rendered as italic text</p>
 
-<p>Formatting can span over multiple lines, and intraword emphasis is allowed. 
+<p>Formatting can span over multiple lines, and intraword emphasis is allowed.
 
 <h2 id="blockquotes">Blockquotes</h2>
 <p><em>Koara:</em></p>
@@ -213,6 +213,7 @@ function greeting() {
 <p>If enabled, text between backticks will be rendered as code text. It can span over multiple lines.</p>
 
 <p>Koara also support fenced code blocks. A fenced code block starts at the beginning of a line with at least 3 backticks. It can contain an optional 'language' identifier.</p>
+
     	</div>
 	</body>
 </html>
