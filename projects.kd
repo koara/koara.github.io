@@ -3,12 +3,20 @@
 <h2>Parsers</h2>
 <ul>
   <li><a href="http://www.github.com/koara/koara-java">Koara-java</a>: Koara parser written in Java
+  <li><a href="http://www.github.com/koara/koara-js">Koara-js</a>: Koara parser written in Javascript
   <li><a href="http://www.github.com/koara/koara-php">Koara-php</a>: Koara parser written in PHP
-  <li>Koara-js (coming soon)</li>
+  <li>Koara-rb (coming soon)</li>
+</ul>
+
+<h2>Build Tools</h2>
+<ul>
+  <li><a href="https://github.com/codeaddslife/koara-ant-plugin">Ant</a>: Koara converter task for Ant</li>
 </ul>
 
 <h2>Dependency Management</h2>
 <ul>
+  <li><a href="http://bower.io/search/?q=koara">Bower</a></li>
   <li><a href="https://packagist.org/packages/koara/koara">Composer</a></li>
-  <li><a href="http://search.maven.org/#search%7Cga%7C1%7Ckoara">Maven</a></li>
+  <li><a href="https://search.maven.org/#search%7Cga%7C1%7Ckoara">Maven</a></li>
+  <li><a href="https://www.npmjs.com/search?q=koara">Npm</a></li>
 </ul>
