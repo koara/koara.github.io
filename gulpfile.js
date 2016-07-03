@@ -1,6 +1,6 @@
-var fs = require('fs'),
-	gulp = require('gulp'),
-    $ = require('gulp-load-plugins')();
+const $ = require('gulp-load-plugins')();
+const fs = require('fs');
+const gulp = require('gulp');
 
 gulp.task('render', function() {
 	_render('index', 'Koara - A modular lightweight markup language');
