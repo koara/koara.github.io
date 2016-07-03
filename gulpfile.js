@@ -1,10 +1,6 @@
 var fs = require('fs'),
 	gulp = require('gulp'),
-	imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
-    rename = require('gulp-rename'),
-    template = require('gulp-template'),
-	webserver = require('gulp-webserver');
+    $ = require('gulp-load-plugins')();
 
 gulp.task('render', function() {
 	_render('index', 'Koara - A modular lightweight markup language');
@@ -17,21 +13,12 @@ gulp.task('render', function() {
 gulp.task('default', ['render']);
 gulp.task('serve', ['default'], function() {
 	gulp.watch('*.kd', ['render']);
-	gulp.src('.').pipe(webserver());
-});
-
-gulp.task('imagemin', ['default'], function() {
-	 gulp.src('./*.png').pipe(imagemin({
-        progressive: true,
-        svgoPlugins: [{removeViewBox: false}],
-        use: [pngquant()]
-    }))
-    .pipe(gulp.dest('.'));
+	gulp.src('.').pipe($.webserver());
 });
 
 function _render(file, title, cssOutput) {
 	gulp.src('_template.html')
-		.pipe(rename(file + '.html'))
-		.pipe(template({title: title, content: fs.readFileSync(file + '.kd','utf8') }))
+		.pipe($.rename(file + '.html'))
+		.pipe($.template({title: title, content: fs.readFileSync(file + '.kd','utf8') }))
 		.pipe(gulp.dest('.'));
 }
