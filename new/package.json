@@ -1,0 +1,9 @@
+{
+  "name": "koara.github.io",
+  "version": "1.0.0",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-webserver": "^0.9.1"
+  }
+}
