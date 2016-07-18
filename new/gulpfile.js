@@ -1,8 +1,6 @@
 const $ = require('gulp-load-plugins')();
 const gulp = require('gulp');
-
-gulp.task('html', function() {
-});
+const browserSync = require('browser-sync').create();
 
 gulp.task('sass', function () {
     return gulp.src('src/base.scss')
@@ -12,8 +10,8 @@ gulp.task('sass', function () {
 });
 
 gulp.task('serve', ['default'], function() {
-	gulp.watch('*.scss', ['sass']);
-	gulp.src('.').pipe($.webserver());
+    browserSync.init({ server: { baseDir: "./" }, notify: false });
+    gulp.watch("app/scss/*.scss", ['sass']);
 });
 
 gulp.task('default', ['sass']);
