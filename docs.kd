@@ -15,8 +15,8 @@
 <p><em>Koara:</em></p>
 <pre><code>This is a simple paragraph.
 
-Use the return key for lines
-that need a break.
+If you want to create a line break,
+end a line with two or more spaces
 </code></pre>
 
 <p><em>HTML:</em></p>
