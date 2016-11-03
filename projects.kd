@@ -5,7 +5,8 @@
   <li><a href="http://www.github.com/koara/koara-java">Koara-java</a>: Koara parser written in Java
   <li><a href="http://www.github.com/koara/koara-js">Koara-js</a>: Koara parser written in Javascript
   <li><a href="http://www.github.com/koara/koara-php">Koara-php</a>: Koara parser written in PHP
-  <li>Koara-rb (coming soon)</li>
+   <li><a href="http://www.github.com/koara/koara-rb">Koara-rb</a>: Koara parser written in Ruby
+  <li>Koara-swift (coming soon)</li>
 </ul>
 
 <h2>Build Tools</h2>
