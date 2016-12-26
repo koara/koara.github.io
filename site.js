@@ -11,6 +11,4 @@ result.accept(renderer);
 var template = Handlebars.compile(fs.readFileSync('layout.html', "utf8"));
 var html = template({body: renderer.getOutput()});
 
-
-
-fs.writeFileSync("index.htm", html);
+fs.writeFileSync("index.html", html);
