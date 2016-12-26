@@ -1,5 +1,2 @@
-node_modules
-.idea
-.classpath
-.project
 *.iml
+node_modules

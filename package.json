@@ -1,12 +1,14 @@
 {
   "name": "koara.github.io",
   "version": "1.0.0",
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-load-plugins": "^1.2.4",
-    "gulp-rename": "^1.2.2",
-    "gulp-template": "^3.0.0",
-    "gulp-webserver": "^0.9.1",
-    "node-sass": "^3.4.2"
+  "scripts": {
+    "browser-sync": "browser-sync start --no-notify --server --files '*.(html|kd)'",
+    "compile": "node site.js",
+    "start": "npm run compile && npm run browser-sync"
+  },
+  "dependencies": {
+    "handlebars": "^4.0.6",
+    "koara": "^0.13.0",
+    "koara-html": "^0.13.0"
   }
 }
