@@ -9,8 +9,8 @@ renderer.headingIds = true;
 result.accept(renderer);
 
 var template = Handlebars.compile(fs.readFileSync('layout.html', "utf8"));
-var html    = template({body: renderer.getOutput()});
+var html = template({body: renderer.getOutput()});
 
 
 
-fs.writeFileSync("index.html", html);
+fs.writeFileSync("index.htm", html);
